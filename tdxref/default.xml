@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote alias="repo" fetch="https://github.com/meta-qt5" name="githq"/>
-  <remote alias="repo_sd" fetch="git@github.com:ssplservices/Ametek.git" name="git_sd"/>
+  <remote alias="repo_sd" fetch="https://github.com/ssplservices" name="git_sd"/>
 
   <include name="base/pinned.xml"/>
   <include name="bsp/pinned-nxp.xml"/>
