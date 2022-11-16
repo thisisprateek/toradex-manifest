@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <include name="base/pinned.xml" />
+  <include name="bsp/pinned-nxp.xml" />
+  <include name="bsp/pinned-tdx.xml" />
+
+  <remote alias="repo" fetch="https://github.com/meta-qt5" name="githq"/>
+  <remote alias="repo" fetch="https://github.com/toradex" name="githt"/>
+  <remote alias="repo" fetch="http://gitlab.toradex.int/rd/testing/som-fct" name="trdx-int"/>
+
+  <project name="meta-toradex-tester.git" path="layers/meta-toradex-tester" remote="trdx-int" revision="e62ecf20876ab9654498436ae8668b6300b8d18a" upstream="dunfell-5.x.y">
+    <copyfile dest="export" src="buildconf/export"/>
+  </project>
+
+  <project name="meta-qt5.git" path="layers/meta-qt5" remote="githq" revision="6bfe29d9e8fdd5c2fd17c736814b6df859b3af50" upstream="dunfell"/>
+  <project name="meta-toradex-demos.git" path="layers/meta-toradex-demos" remote="tdx" revision="ff479c129366b7f67945e661472762ae6cb541f2" upstream="dunfell-5.x.y"/>
+  <project name="meta-toradex-distro.git" path="layers/meta-toradex-distro" remote="tdx" revision="a991a45459b7f3c0870ef94da6e48c279eaa97f0" upstream="dunfell-5.x.y"/>
+  <project dest-branch="dunfell-5.x.y" name="meta-toradex-tezi.git" path="layers/meta-toradex-tezi" remote="githt" revision="5967d772d686789e5ad95ab913870a9d1f8ff1a5" upstream="dunfell-5.x.y"/>
+
+  <project name="meta-toradex-tester-control.git" path="layers/meta-toradex-tester-control" remote="trdx-int" revision="ec7c92c3728c6805e9b7de5abb257a2b3cca37ef" upstream="dunfell-5.x.y">
+    <copyfile dest="export_control_image" src="buildconf/export"/>
+  </project>
+</manifest>

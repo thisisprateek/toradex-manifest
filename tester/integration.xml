@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <include name="base/pinned.xml" />
+  <include name="bsp/pinned-nxp.xml" />
+  <include name="bsp/integration-tdx.xml" />
+
+  <remote alias="repo" fetch="https://github.com/meta-qt5" name="githq"/>
+  <remote alias="repo" fetch="https://github.com/toradex" name="githt"/>
+  <remote alias="repo" fetch="http://gitlab.toradex.int/rd/testing/som-fct" name="trdx-int"/>
+
+  <project name="meta-toradex-tester.git" path="layers/meta-toradex-tester" remote="trdx-int" revision="dunfell-5.x.y">
+    <copyfile dest="export" src="buildconf/export"/>
+  </project>
+
+  <project name="meta-qt5.git" path="layers/meta-qt5" remote="githq" revision="6bfe29d9e8fdd5c2fd17c736814b6df859b3af50" upstream="dunfell"/>
+  <project name="meta-toradex-demos.git" path="layers/meta-toradex-demos" remote="tdx" revision="dunfell-5.x.y"/>
+  <project name="meta-toradex-distro.git" path="layers/meta-toradex-distro" remote="tdx" revision="dunfell-5.x.y"/>
+  <project name="meta-toradex-tezi.git" path="layers/meta-toradex-tezi" remote="githt" revision="dunfell-5.x.y"/>
+
+  <project name="meta-toradex-tester-control.git" path="layers/meta-toradex-tester-control" remote="trdx-int" revision="dunfell-5.x.y">
+    <copyfile dest="export_control_image" src="buildconf/export"/>
+  </project>
+</manifest>
