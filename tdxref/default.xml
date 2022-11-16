@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote alias="repo" fetch="https://github.com/meta-qt5" name="githq"/>
+  <remote alias="repo_sd" fetch="https://github.com/ssplservices" name="git_sd"/>
 
   <include name="base/pinned.xml"/>
   <include name="bsp/pinned-nxp.xml"/>
@@ -11,4 +12,5 @@
   <project name="meta-toradex-distro.git" path="layers/meta-toradex-distro" remote="tdx" revision="4cdeb8980411db8fc65655832a664bf80d93e534" upstream="dunfell-5.x.y">
     <copyfile dest="export" src="buildconf/export"/>
   </project>
+  <project name="Ametek.git" path="layers/Ametek" remote="git_sd" revision="main"/>
 </manifest>
